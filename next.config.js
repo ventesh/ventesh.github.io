@@ -7,6 +7,11 @@ const withNextra = require('nextra')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // any configs you need
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+  assetPrefix: './',
 }
 
 module.exports = withNextra(nextConfig)
