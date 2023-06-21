@@ -4,14 +4,24 @@ const withNextra = require('nextra')({
   // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
 })
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+
+let assetPrefix = ''
+let basePath = '/'
+
+if (isGithubActions) {
+  // trim off `<owner>/`
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // any configs you need
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
-  assetPrefix: './',
+  assetPrefix: assetPrefix,
+  basePath: basePath,
 }
 
 module.exports = withNextra(nextConfig)
