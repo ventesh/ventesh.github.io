@@ -22,6 +22,10 @@ const nextConfig = {
   // any configs you need
   assetPrefix: assetPrefix,
   basePath: basePath,
+  images: {
+    loader: 'akamai',
+    path: assetPrefix,
+  },
 }
 
 module.exports = withNextra(nextConfig)
