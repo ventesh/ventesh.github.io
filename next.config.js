@@ -20,7 +20,7 @@ if (isGithubActions) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // any configs you need
-  assetPrefix: assetPrefix,
+  assetPrefix: "/",
   basePath: basePath,
   images: {
     loader: 'akamai',
