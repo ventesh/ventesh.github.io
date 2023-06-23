@@ -24,6 +24,7 @@ const nextConfig = {
   // basePath: "/",
   images: {
     // path: assetPrefix,
+    unoptimized : true
   },
 }
 
