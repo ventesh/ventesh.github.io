@@ -23,8 +23,7 @@ const nextConfig = {
   assetPrefix: "/",
   // basePath: "/",
   images: {
-    loader: 'akamai',
-    path: assetPrefix,
+    // path: assetPrefix,
   },
 }
 
